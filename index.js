@@ -85,7 +85,7 @@ app.post('/addrecipe', async (request, response) => {
             "ingredients":request.body.ingredients,
             "category":request.body.category,
             "imageUrl":request.body.imageUrl,
-            "instructions":request.body.instructions,
+            "description":request.body.description,
         });
         response.status(201).json(newRecipe);
     } catch (error) {
@@ -102,7 +102,7 @@ app.patch('/updaterecipe/:id', async function(request, response){
             "ingredients":request.body.ingredients,
             "category":request.body.category,
             "imageUrl":request.body.imageUrl,
-            "instructions":request.body.instructions,
+            "description":request.body.description,
         });
 
         if (recipeedit) {
